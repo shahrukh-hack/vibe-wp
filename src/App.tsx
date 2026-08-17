@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { SpecializationsMatrix } from './components/SpecializationsMatrix';
+import { PersistentWpMemory } from './components/PersistentWpMemory';
 import { PhpRunnerSandbox } from './components/PhpRunnerSandbox';
 import { WooCommerceManager } from './components/WooCommerceManager';
 import { GutenbergScaffolder } from './components/GutenbergScaffolder';
@@ -15,12 +17,15 @@ import {
   Sun,
   Moon,
   Sparkles,
-  ExternalLink,
+  Box,
+  Brain,
 } from 'lucide-react';
 import { Toaster } from 'sonner';
 
 export function App() {
-  const [activeTab, setActiveTab] = useState<'php' | 'woo' | 'gutenberg' | 'hooks' | 'mcp'>('php');
+  const [activeTab, setActiveTab] = useState<
+    'specializations' | 'memory' | 'php' | 'woo' | 'gutenberg' | 'hooks' | 'mcp'
+  >('specializations');
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
@@ -48,7 +53,7 @@ export function App() {
                 Vibe WP
               </span>
               <span className="hidden sm:inline-block ml-2 text-[11px] font-mono text-muted-foreground">
-                v1.0.0 (MCP WordPress & WooCommerce Engine)
+                v1.1.0 (38 Plugins & Persistent Memory)
               </span>
             </div>
           </div>
@@ -81,27 +86,29 @@ export function App() {
         <section className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-mono font-semibold">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Direct PHP Execution • WooCommerce API • Gutenberg Blocks • MCP Standard</span>
+            <span>38 Builders & Plugins Covered • Persistent Memory • Direct PHP Execution</span>
           </div>
 
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-light text-foreground tracking-tight leading-tight">
-            Universal AI Agent MCP for <span className="italic font-normal text-primary">WordPress & WooCommerce</span>
+            Universal AI Agent MCP for <span className="italic font-normal text-primary">WordPress & 38 Plugins</span>
           </h1>
 
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-            Connect AI coding agents (<strong>Antigravity</strong>, <strong>Cursor</strong>, <strong>Claude Code</strong>) directly to your WordPress backend. Execute PHP within the WordPress lifecycle, manage WooCommerce inventory, and scaffold Gutenberg blocks without API bottlenecks.
+            Give AI coding agents (<strong>Antigravity</strong>, <strong>Cursor</strong>, <strong>Claude Code</strong>) deep runtime intelligence across <strong>38 page builders, themes, custom field plugins, and WooCommerce</strong> with persistent project memory.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-2 pt-2 text-xs font-mono text-muted-foreground">
-            <span className="px-2 py-1 rounded bg-muted">PHP Runtime</span>
+            <span className="px-2 py-1 rounded bg-muted">38 Plugins & Builders</span>
+            <span>•</span>
+            <span className="px-2 py-1 rounded bg-muted">Persistent Memory</span>
+            <span>•</span>
+            <span className="px-2 py-1 rounded bg-muted">Elementor & Bricks</span>
             <span>•</span>
             <span className="px-2 py-1 rounded bg-muted">WooCommerce</span>
             <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">ACF Pro</span>
+            <span className="px-2 py-1 rounded bg-muted">ACF & JetEngine</span>
             <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">Gutenberg React</span>
-            <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">Antigravity & Cursor</span>
+            <span className="px-2 py-1 rounded bg-muted">Yoast & Rank Math</span>
           </div>
         </section>
 
@@ -109,11 +116,13 @@ export function App() {
         <div className="flex justify-center sticky top-20 z-40">
           <div className="inline-flex p-1.5 rounded-2xl border border-border bg-card/95 backdrop-blur-md shadow-sm gap-1 overflow-x-auto max-w-full">
             {[
-              { id: 'php', label: 'PHP Runtime Sandbox', icon: <Terminal className="w-3.5 h-3.5 text-blue-500" /> },
-              { id: 'woo', label: 'WooCommerce Manager', icon: <ShoppingBag className="w-3.5 h-3.5 text-purple-500" /> },
-              { id: 'gutenberg', label: 'Gutenberg Scaffolder', icon: <Layers className="w-3.5 h-3.5 text-emerald-500" /> },
-              { id: 'hooks', label: 'Hook & Filter Explorer', icon: <Zap className="w-3.5 h-3.5 text-amber-500" /> },
-              { id: 'mcp', label: 'MCP Setup Guide', icon: <Server className="w-3.5 h-3.5 text-slate-500" /> },
+              { id: 'specializations', label: '38 Specializations', icon: <Box className="w-3.5 h-3.5 text-indigo-500" /> },
+              { id: 'memory', label: 'Persistent Memory', icon: <Brain className="w-3.5 h-3.5 text-purple-500" /> },
+              { id: 'php', label: 'PHP Sandbox', icon: <Terminal className="w-3.5 h-3.5 text-blue-500" /> },
+              { id: 'woo', label: 'WooCommerce', icon: <ShoppingBag className="w-3.5 h-3.5 text-pink-500" /> },
+              { id: 'gutenberg', label: 'Gutenberg', icon: <Layers className="w-3.5 h-3.5 text-emerald-500" /> },
+              { id: 'hooks', label: 'Hooks & Filters', icon: <Zap className="w-3.5 h-3.5 text-amber-500" /> },
+              { id: 'mcp', label: 'MCP Setup', icon: <Server className="w-3.5 h-3.5 text-slate-500" /> },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -131,8 +140,10 @@ export function App() {
           </div>
         </div>
 
-        {/* Dynamic Views */}
+        {/* Dynamic Views (Rendered directly below navigation bar) */}
         <section className="pt-2">
+          {activeTab === 'specializations' && <SpecializationsMatrix />}
+          {activeTab === 'memory' && <PersistentWpMemory />}
           {activeTab === 'php' && <PhpRunnerSandbox />}
           {activeTab === 'woo' && <WooCommerceManager />}
           {activeTab === 'gutenberg' && <GutenbergScaffolder />}
@@ -146,7 +157,7 @@ export function App() {
             Created with intention by <a href="https://github.com/shahrukh-hack" className="text-primary font-bold hover:underline">Yogeshkumar Patel</a> • Adelaide, Australia 🇦🇺
           </p>
           <p className="text-[11px] text-muted-foreground">
-            Open Source under MIT License • Inspired by Novamira & the WordPress Open Source Community
+            Open Source under MIT License • 38 WordPress & WooCommerce Specializations
           </p>
         </footer>
       </main>

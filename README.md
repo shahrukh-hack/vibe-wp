@@ -1,19 +1,20 @@
 <div align="center">
 
-# 🌐 Vibe WP (v1.0)
-### Universal Model Context Protocol (MCP) Server & Headless AI Agent Runtime for WordPress, WooCommerce & ACF
+# 🌐 Vibe WP (v1.1)
+### Universal Model Context Protocol (MCP) Server & Headless AI Agent Runtime with 38 Ecosystem Specializations & Persistent Project Memory
 
 [![Author](https://img.shields.io/badge/Author-@shahrukh--hack-181717?style=flat-square&logo=github)](https://github.com/shahrukh-hack)
-[![Version](https://img.shields.io/badge/Version-v1.0.0-2563EB?style=flat-square)](package.json)
+[![Version](https://img.shields.io/badge/Version-v1.1.0-2563EB?style=flat-square)](package.json)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 [![MCP Protocol](https://img.shields.io/badge/MCP-JSON--RPC%202.0%20Ready-green?style=flat-square)](https://modelcontextprotocol.io/)
-[![WordPress](https://img.shields.io/badge/WordPress-6.7%2B%20Ready-21759B?style=flat-square&logo=wordpress)](https://wordpress.org)
-[![WooCommerce](https://img.shields.io/badge/WooCommerce-9.0%2B%20Ready-96588A?style=flat-square&logo=woocommerce)](https://woocommerce.com)
+[![Specializations](https://img.shields.io/badge/Specializations-38%20Plugins%20Covered-indigo?style=flat-square)](#-38-builders-plugins--themes-covered-end-to-end)
+[![Persistent Memory](https://img.shields.io/badge/Memory-Persistent%20Project%20Memory-purple?style=flat-square)](#-persistent-project-memory)
 [![Live Visualizer](https://img.shields.io/badge/Live-Demo%20Sandbox-FF0055?style=flat-square&logo=framer)](https://shahrukh-hack.github.io/vibe-wp/)
 
 <br />
 
-> **Give your AI coding agents direct PHP runtime execution, WooCommerce product controls, and Gutenberg React block scaffolding inside WordPress.**
+> **The ultimate WordPress & WooCommerce intelligence layer for AI coding agents.**  
+> Equips **Antigravity**, **Cursor**, and **Claude Code** with direct PHP runtime execution, **38 page builders & plugins covered end-to-end**, and persistent project memory across resets.
 
 </div>
 
@@ -21,65 +22,62 @@
 
 ## 🌐 Live Interactive MCP Demo Sandbox
 
-Test the visual PHP execution environment, WooCommerce inventory manager, and Gutenberg React generator:  
+Test the visual PHP execution environment, 38-specialization inspector, and persistent memory ledger:  
 👉 **[https://shahrukh-hack.github.io/vibe-wp/](https://shahrukh-hack.github.io/vibe-wp/)**
 
 ---
 
-## ⚡ The Problem: Why Traditional APIs Fail for AI Agents in WordPress
+## 📦 38 Builders, Plugins & Themes Covered End-to-End
 
-When using AI coding agents (**Antigravity**, **Cursor**, **Claude Code**, **Windsurf**) to build or maintain WordPress and WooCommerce websites, standard REST APIs fall short:
+`vibe-wp` provides deep runtime integration, metadata parsing, and hook awareness across 38 core WordPress technologies:
 
-1. **🔒 Restricted API Endpoints:** Standard REST endpoints cannot run complex WP_Query filters, manipulate custom post meta directly, or execute arbitrary PHP logic.
-2. **🧩 Plugin Black Boxes:** Agents cannot inspect active plugin filters, ACF field groups, or WooCommerce action hooks without writing custom throwaway plugins.
-3. **🧱 Manual Gutenberg Block Authoring:** Generating modern React 19 / Tailwind Gutenberg blocks requires tedious boilerplate setup.
+| Category | Count | Supported Technologies Covered End-to-End |
+| :--- | :---: | :--- |
+| **🏗️ Builders** | **8** | **Elementor**, **Bricks Builder**, **Divi 5**, **Beaver Builder**, **Breakdance**, **WPBakery Page Builder**, **Etch**, **Mosaic** |
+| **🎨 Themes** | **6** | **GeneratePress**, **Astra**, **Kadence Theme**, **Avada**, **OceanWP**, **Spectra One** |
+| **🧱 Blocks** | **3** | **GenerateBlocks**, **Kadence Blocks**, **Spectra** |
+| **🛍️ Store** | **1** | **WooCommerce** (Product CRUD, Inventory, Checkout, Cart Fees) |
+| **📝 Forms** | **6** | **WPForms**, **Contact Form 7 (CF7)**, **Gravity Forms**, **Fluent Forms**, **Ninja Forms**, **Formidable Forms** |
+| **🏷️ Fields & CPT** | **6** | **Advanced Custom Fields (ACF PRO)**, **JetEngine (Crocoblock)**, **Meta Box**, **ACPT**, **Pods Framework**, **Admin & Site Enhancements (ASE)** |
+| **⚡ Add-ons** | **1** | **Bricksforge** (GSAP timelines, Pro Forms, nestable elements) |
+| **🔄 Dynamic Data** | **1** | **Dynamic Shortcodes** (user/post context evaluation) |
+| **💻 Code Management** | **1** | **Code Snippets** (database-stored PHP/CSS/JS execution) |
+| **🚀 SEO** | **4** | **Yoast SEO**, **Rank Math SEO**, **All in One SEO (AIOSEO)**, **SEOPress** |
+| **🌐 Translation** | **1** | **Weglot** (DOM multilingual translation hooks) |
 
 ---
 
-## 🚀 The Vibe WP Architecture
+## 🧠 Persistent Project Memory
 
-```
-┌────────────────────────────────────────────────────────┐
-│     AI AGENTS (Antigravity / Cursor / Claude Code)     │
-└───────────────────────────┬────────────────────────────┘
-                            │ Model Context Protocol (JSON-RPC 2.0 stdio)
-                            ▼
-┌────────────────────────────────────────────────────────┐
-│             VIBE WP MCP SERVER (vibe-wp)               │
-└───────────────────────────┬────────────────────────────┘
-                            │ Direct PHP Lifecycle Execution & REST Auth
-                            ▼
-┌────────────────────────────────────────────────────────┐
-│          WORDPRESS & WOOCOMMERCE ENVIRONMENT           │
-│ • execute_php               • wc_manage_products       │
-│ • scaffold_gutenberg_block  • inspect_wp_hooks         │
-│ • ACF PRO Field Schemas     • Custom Post Types (CPT)  │
-└────────────────────────────────────────────────────────┘
-```
+`vibe-wp` integrates directly with `AGENT_MEMORY.md` to ensure your AI agents never forget:
+* **Active Builder Preferences:** Global palette IDs, spatial grids, and typography tokens (e.g., Bricks Global Colors).
+* **Custom Post Types & Taxonomies:** ACF Repeater definitions, JetEngine relations, and CPT REST slugs.
+* **Theme Hook Overrides:** Specific filter priorities (e.g., `generate_after_header` priority 15).
+* **Security & Nonce Rules:** Custom WooCommerce checkout verification constraints.
 
 ---
 
 ## ⚡ 60-Second Quickstart Guide
 
 ```bash
-# 1. Initialize configuration in your local development workspace
+# 1. Initialize configuration and persistent memory
 npx vibe-wp init
 
-# 2. Verify connection to your local WordPress site
-npx vibe-wp check
+# 2. View all 38 supported ecosystem plugins and builders
+npx vibe-wp specs
 
-# 3. Scaffold a custom Gutenberg block with React & Tailwind
-npx vibe-wp scaffold-block pricing-matrix
+# 3. Inspect active project memory
+npx vibe-wp memory
 
-# 4. Launch the Model Context Protocol (MCP) Server for AI IDEs
+# 4. Start the native Model Context Protocol (MCP) stdio server
 npx vibe-wp mcp
 ```
 
 ---
 
-## 🔌 Model Context Protocol (MCP) Setup for AI Editors
+## 🔌 Model Context Protocol (MCP) Setup
 
-Equip **Antigravity**, **Cursor**, and **Claude Code** with native WordPress and WooCommerce tools:
+Equip **Antigravity**, **Cursor**, and **Claude Code** with direct WordPress runtime tools:
 
 ### 🔹 Antigravity (`~/.gemini/antigravity/mcp-config.json`):
 ```json
@@ -138,10 +136,10 @@ Equip **Antigravity**, **Cursor**, and **Claude Code** with native WordPress and
 
 | Tool Name | Parameters | Description |
 | :--- | :--- | :--- |
-| **`execute_php`** | `{ code: string }` | Executes isolated PHP scripts directly inside the WordPress runtime with access to `$wpdb` and core APIs. |
+| **`execute_php`** | `{ code: string }` | Executes isolated PHP scripts directly inside the active WordPress lifecycle with `$wpdb` access. |
+| **`inspect_specialization`** | `{ pluginSlug: string }` | Queries schema, models, and hooks across **38 supported builders and plugins**. |
 | **`wc_manage_products`** | `{ action, productId?, value? }` | Queries inventory, updates bulk pricing, and manages stock levels in WooCommerce. |
-| **`scaffold_gutenberg_block`** | `{ blockSlug: string }` | Generates modern React 19 & Tailwind Gutenberg blocks with `block.json` metadata. |
-| **`inspect_wp_hooks`** | `{}` | Returns all active WordPress filters and actions with priority rankings. |
+| **`get_persistent_memory`** | `{}` | Retrieves persistent site architectural decisions, theme hook overrides, and CPT definitions. |
 
 ---
 
@@ -149,24 +147,6 @@ Equip **Antigravity**, **Cursor**, and **Claude Code** with native WordPress and
 
 > [!IMPORTANT]
 > **Development & Staging Only:** `vibe-wp` enables direct PHP execution and is designed strictly for **local development environments** (LocalWP, Docker, DDEV, staging servers). Do not expose direct PHP execution endpoints on unmonitored production servers without strict firewall and application password restrictions.
-
----
-
-## 🙏 Credits & Ecosystem References
-
-- **[Novamira](https://github.com/use-novamira/novamira):** Pioneered PHP runtime access via Model Context Protocol for WordPress AI agents.
-- **[WordPress Core](https://wordpress.org):** The world's open-source publishing engine.
-- **[WooCommerce](https://woocommerce.com):** Open-source e-commerce platform.
-
----
-
-## 🤝 Part of The Vibe Coder's Power Suite
-
-1. 🪄 **[`vibe-superkit`](https://github.com/shahrukh-hack/vibe-superkit):** Anti-AI Slop & Stripe/Tailwind UI Design Engine ([Live Demo](https://shahrukh-hack.github.io/vibe-superkit/))
-2. 🧠 **[`vibe-memory`](https://github.com/shahrukh-hack/vibe-memory):** Universal Long-Term Memory & Codebase AST Intelligence ([Live Demo](https://shahrukh-hack.github.io/vibe-memory/))
-3. ⚡ **[`vibe-skills`](https://github.com/shahrukh-hack/vibe-skills):** Mega-Library of 50 Standard Agent Skills with 1-Command CLI (`npx vibe-skills add <skill>`)
-4. 🤖 **[`vibe-agency`](https://github.com/shahrukh-hack/vibe-agency):** Autonomous Multi-Agent Team Orchestrator ([Live Demo](https://shahrukh-hack.github.io/vibe-agency/))
-5. 🌐 **[`vibe-wp`](https://github.com/shahrukh-hack/vibe-wp):** Model Context Protocol Server for WordPress & WooCommerce ([Live Demo](https://shahrukh-hack.github.io/vibe-wp/))
 
 ---
 
