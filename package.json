@@ -1,0 +1,49 @@
+{
+  "name": "vibe-wp",
+  "version": "1.0.0",
+  "description": "Universal Model Context Protocol (MCP) Server & Headless AI Agent Runtime for WordPress, WooCommerce & ACF",
+  "main": "dist/index.html",
+  "bin": {
+    "vibe-wp": "./bin/vibe-wp.js"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "wordpress",
+    "woocommerce",
+    "mcp",
+    "model-context-protocol",
+    "ai-agents",
+    "antigravity",
+    "cursor",
+    "claude-code",
+    "gutenberg",
+    "acf",
+    "php"
+  ],
+  "author": "Yogeshkumar Patel <https://github.com/shahrukh-hack>",
+  "license": "MIT",
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.9",
+    "lucide-react": "^0.454.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sonner": "^1.7.0",
+    "tailwind-merge": "^2.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.3",
+    "vite": "^6.4.3"
+  }
+}
