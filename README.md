@@ -7,14 +7,15 @@
 [![Version](https://img.shields.io/badge/Version-v1.1.0-2563EB?style=flat-square)](package.json)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 [![MCP Protocol](https://img.shields.io/badge/MCP-JSON--RPC%202.0%20Ready-green?style=flat-square)](https://modelcontextprotocol.io/)
-[![Specializations](https://img.shields.io/badge/Specializations-38%20Plugins%20Covered-indigo?style=flat-square)](#-38-builders-plugins--themes-covered-end-to-end)
-[![Persistent Memory](https://img.shields.io/badge/Memory-Persistent%20Project%20Memory-purple?style=flat-square)](#-persistent-project-memory)
+[![Requirements](https://img.shields.io/badge/Requires-WP%206.9%2B%20%7C%20PHP%208.0%2B-blueviolet?style=flat-square)](#-system-requirements)
+[![Specializations](https://img.shields.io/badge/Specializations-38%20Covered%20End--to--End-indigo?style=flat-square)](#-specializations-38-builders-and-plugins-covered-end-to-end)
+[![Persistent Memory](https://img.shields.io/badge/Memory-Across%20Sessions-purple?style=flat-square)](#-intelligence--persistent-project-memory)
 [![Live Visualizer](https://img.shields.io/badge/Live-Demo%20Sandbox-FF0055?style=flat-square&logo=framer)](https://shahrukh-hack.github.io/vibe-wp/)
 
 <br />
 
-> **The ultimate WordPress & WooCommerce intelligence layer for AI coding agents.**  
-> Equips **Antigravity**, **Cursor**, and **Claude Code** with direct PHP runtime execution, **38 page builders & plugins covered end-to-end**, and persistent project memory across resets.
+> **Adds deep WordPress specializations to your AI.**  
+> Built on top of Novamira Free & direct MCP stdio runtime. Equips **Antigravity**, **Cursor**, and **Claude Code** with direct PHP execution, **38 page builders & plugins covered end-to-end**, and persistent project memory across sessions.
 
 </div>
 
@@ -27,33 +28,62 @@ Test the visual PHP execution environment, 38-specialization inspector, and pers
 
 ---
 
-## 📦 38 Builders, Plugins & Themes Covered End-to-End
+## ⚡ System Requirements
 
-`vibe-wp` provides deep runtime integration, metadata parsing, and hook awareness across 38 core WordPress technologies:
-
-| Category | Count | Supported Technologies Covered End-to-End |
-| :--- | :---: | :--- |
-| **🏗️ Builders** | **8** | **Elementor**, **Bricks Builder**, **Divi 5**, **Beaver Builder**, **Breakdance**, **WPBakery Page Builder**, **Etch**, **Mosaic** |
-| **🎨 Themes** | **6** | **GeneratePress**, **Astra**, **Kadence Theme**, **Avada**, **OceanWP**, **Spectra One** |
-| **🧱 Blocks** | **3** | **GenerateBlocks**, **Kadence Blocks**, **Spectra** |
-| **🛍️ Store** | **1** | **WooCommerce** (Product CRUD, Inventory, Checkout, Cart Fees) |
-| **📝 Forms** | **6** | **WPForms**, **Contact Form 7 (CF7)**, **Gravity Forms**, **Fluent Forms**, **Ninja Forms**, **Formidable Forms** |
-| **🏷️ Fields & CPT** | **6** | **Advanced Custom Fields (ACF PRO)**, **JetEngine (Crocoblock)**, **Meta Box**, **ACPT**, **Pods Framework**, **Admin & Site Enhancements (ASE)** |
-| **⚡ Add-ons** | **1** | **Bricksforge** (GSAP timelines, Pro Forms, nestable elements) |
-| **🔄 Dynamic Data** | **1** | **Dynamic Shortcodes** (user/post context evaluation) |
-| **💻 Code Management** | **1** | **Code Snippets** (database-stored PHP/CSS/JS execution) |
-| **🚀 SEO** | **4** | **Yoast SEO**, **Rank Math SEO**, **All in One SEO (AIOSEO)**, **SEOPress** |
-| **🌐 Translation** | **1** | **Weglot** (DOM multilingual translation hooks) |
+```
+REQUIRES: Novamira Free · WordPress 6.9+ · PHP 8.0+
+On top of Novamira Free & Native Model Context Protocol (JSON-RPC 2.0 stdio)
+```
 
 ---
 
-## 🧠 Persistent Project Memory
+## 📦 Specializations: 38 Builders and Plugins Covered End-to-End (and growing)
 
-`vibe-wp` integrates directly with `AGENT_MEMORY.md` to ensure your AI agents never forget:
-* **Active Builder Preferences:** Global palette IDs, spatial grids, and typography tokens (e.g., Bricks Global Colors).
+`vibe-wp` provides deep architectural integration, schema parsing, and hook awareness across 38 core WordPress technologies:
+
+### 🏗️ **Builders**
+> **Elementor** · **Bricks** · **Divi 5** · **Beaver Builder** · **Breakdance** · **WPBakery Page Builder** · **Etch** · **Mosaic** · *and growing*
+
+### 🎨 **Themes**
+> **GeneratePress** · **Astra** · **Kadence** · **Avada** · **OceanWP** · **Spectra One** · *and growing*
+
+### 🧱 **Blocks**
+> **GenerateBlocks** · **Kadence Blocks** · **Spectra** · *and growing*
+
+### 🛍️ **Store**
+> **WooCommerce** · *and growing*
+
+### 📝 **Forms**
+> **WPForms** · **Contact Form 7** · **Gravity Forms** · **Fluent Forms** · **Ninja Forms** · **Formidable Forms** · *and growing*
+
+### 🏷️ **Field Plugins**
+> **ACF** · **JetEngine** · **Meta Box** · **ACPT** · **Pods** · **ASE (Admin and Site Enhancements)** · *and growing*
+
+### ⚡ **Add-ons**
+> **Bricksforge** · *and growing*
+
+### 🔄 **Dynamic Data**
+> **Dynamic Shortcodes** · *and growing*
+
+### 💻 **Code**
+> **Code Snippets** · *and growing*
+
+### 🚀 **SEO**
+> **Yoast SEO** · **Rank Math** · **All in One SEO** · **SeoPress** · *and growing*
+
+### 🌐 **Translation**
+> **Weglot** · *and growing*
+
+---
+
+## 🧠 Intelligence & Persistent Project Memory
+
+### **Memory Across Sessions**
+`vibe-wp` preserves site-specific architectural decisions in `AGENT_MEMORY.md` so AI agents never lose context when switching tools or starting fresh conversations:
+* **Active Builder Preferences:** Global palette tokens, layout grid spacing, and typography classes (e.g. Bricks & Elementor tokens).
 * **Custom Post Types & Taxonomies:** ACF Repeater definitions, JetEngine relations, and CPT REST slugs.
-* **Theme Hook Overrides:** Specific filter priorities (e.g., `generate_after_header` priority 15).
-* **Security & Nonce Rules:** Custom WooCommerce checkout verification constraints.
+* **Theme Hook Overrides:** Specific filter priorities (e.g. `generate_after_header` priority 15).
+* **Security & Nonce Rules:** WooCommerce checkout verification constraints and custom sanitizers.
 
 ---
 
