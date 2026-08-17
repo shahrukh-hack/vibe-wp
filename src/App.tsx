@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import { AiAttributeExtractorDemo } from './components/AiAttributeExtractorDemo';
+import { WsodSafeSandbox } from './components/WsodSafeSandbox';
+import { HeadlessTypeGenerator } from './components/HeadlessTypeGenerator';
+import { QueryOptimizer } from './components/QueryOptimizer';
+import { AssetAuditor } from './components/AssetAuditor';
+import { WebhookSimulator } from './components/WebhookSimulator';
 import { SpecializationsMatrix } from './components/SpecializationsMatrix';
 import { PersistentWpMemory } from './components/PersistentWpMemory';
 import { PhpRunnerSandbox } from './components/PhpRunnerSandbox';
@@ -19,13 +25,31 @@ import {
   Sparkles,
   Box,
   Brain,
+  Shield,
+  Code2,
+  Database,
+  Gauge,
+  Send,
+  Download,
 } from 'lucide-react';
 import { Toaster } from 'sonner';
 
 export function App() {
   const [activeTab, setActiveTab] = useState<
-    'specializations' | 'memory' | 'php' | 'woo' | 'gutenberg' | 'hooks' | 'mcp'
-  >('specializations');
+    | 'extractor'
+    | 'wsod'
+    | 'types'
+    | 'query'
+    | 'assets'
+    | 'webhooks'
+    | 'specializations'
+    | 'memory'
+    | 'php'
+    | 'woo'
+    | 'gutenberg'
+    | 'hooks'
+    | 'mcp'
+  >('extractor');
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
@@ -53,7 +77,7 @@ export function App() {
                 Vibe WP
               </span>
               <span className="hidden sm:inline-block ml-2 text-[11px] font-mono text-muted-foreground">
-                v1.1.0 (38 Plugins & Persistent Memory)
+                v1.2.0 (AI Extractor + 5 Dev Features + 38 Plugins)
               </span>
             </div>
           </div>
@@ -86,29 +110,27 @@ export function App() {
         <section className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-mono font-semibold">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>38 Builders & Plugins Covered • Persistent Memory • Direct PHP Execution</span>
+            <span>AI Attribute Extractor • WSOD Guard • Headless TypeScript • 38 Specializations</span>
           </div>
 
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-light text-foreground tracking-tight leading-tight">
-            Universal AI Agent MCP for <span className="italic font-normal text-primary">WordPress & 38 Plugins</span>
+            Universal AI Agent MCP & <span className="italic font-normal text-primary">WooCommerce Intelligence</span>
           </h1>
 
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-            Give AI coding agents (<strong>Antigravity</strong>, <strong>Cursor</strong>, <strong>Claude Code</strong>) deep runtime intelligence across <strong>38 page builders, themes, custom field plugins, and WooCommerce</strong> with persistent project memory.
+            Autonomous runtime for WordPress & WooCommerce. Extract filterable attributes with AI, prevent fatal WSOD crashes, auto-generate TypeScript schemas, and optimize SQL performance.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-2 pt-2 text-xs font-mono text-muted-foreground">
-            <span className="px-2 py-1 rounded bg-muted">38 Plugins & Builders</span>
+            <span className="px-2 py-1 rounded bg-muted">AI Attribute Extractor</span>
             <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">Persistent Memory</span>
+            <span className="px-2 py-1 rounded bg-muted">WSOD Safe Sandbox</span>
             <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">Elementor & Bricks</span>
+            <span className="px-2 py-1 rounded bg-muted">Headless TS Types</span>
             <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">WooCommerce</span>
+            <span className="px-2 py-1 rounded bg-muted">SQL Optimizer</span>
             <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">ACF & JetEngine</span>
-            <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">Yoast & Rank Math</span>
+            <span className="px-2 py-1 rounded bg-muted">38 Plugins Covered</span>
           </div>
         </section>
 
@@ -116,12 +138,14 @@ export function App() {
         <div className="flex justify-center sticky top-20 z-40">
           <div className="inline-flex p-1.5 rounded-2xl border border-border bg-card/95 backdrop-blur-md shadow-sm gap-1 overflow-x-auto max-w-full">
             {[
-              { id: 'specializations', label: '38 Specializations', icon: <Box className="w-3.5 h-3.5 text-indigo-500" /> },
-              { id: 'memory', label: 'Persistent Memory', icon: <Brain className="w-3.5 h-3.5 text-purple-500" /> },
-              { id: 'php', label: 'PHP Sandbox', icon: <Terminal className="w-3.5 h-3.5 text-blue-500" /> },
-              { id: 'woo', label: 'WooCommerce', icon: <ShoppingBag className="w-3.5 h-3.5 text-pink-500" /> },
-              { id: 'gutenberg', label: 'Gutenberg', icon: <Layers className="w-3.5 h-3.5 text-emerald-500" /> },
-              { id: 'hooks', label: 'Hooks & Filters', icon: <Zap className="w-3.5 h-3.5 text-amber-500" /> },
+              { id: 'extractor', label: 'AI Attribute Extractor', icon: <ShoppingBag className="w-3.5 h-3.5 text-pink-500" /> },
+              { id: 'wsod', label: 'WSOD Safe Guard', icon: <Shield className="w-3.5 h-3.5 text-emerald-500" /> },
+              { id: 'types', label: 'Headless TypeScript', icon: <Code2 className="w-3.5 h-3.5 text-blue-500" /> },
+              { id: 'query', label: 'SQL Query Optimizer', icon: <Database className="w-3.5 h-3.5 text-amber-500" /> },
+              { id: 'assets', label: 'Asset & CWV Auditor', icon: <Gauge className="w-3.5 h-3.5 text-purple-500" /> },
+              { id: 'webhooks', label: 'Webhook Simulator', icon: <Send className="w-3.5 h-3.5 text-indigo-500" /> },
+              { id: 'specializations', label: '38 Specializations', icon: <Box className="w-3.5 h-3.5 text-violet-500" /> },
+              { id: 'memory', label: 'Persistent Memory', icon: <Brain className="w-3.5 h-3.5 text-rose-500" /> },
               { id: 'mcp', label: 'MCP Setup', icon: <Server className="w-3.5 h-3.5 text-slate-500" /> },
             ].map((tab) => (
               <button
@@ -142,12 +166,14 @@ export function App() {
 
         {/* Dynamic Views (Rendered directly below navigation bar) */}
         <section className="pt-2">
+          {activeTab === 'extractor' && <AiAttributeExtractorDemo />}
+          {activeTab === 'wsod' && <WsodSafeSandbox />}
+          {activeTab === 'types' && <HeadlessTypeGenerator />}
+          {activeTab === 'query' && <QueryOptimizer />}
+          {activeTab === 'assets' && <AssetAuditor />}
+          {activeTab === 'webhooks' && <WebhookSimulator />}
           {activeTab === 'specializations' && <SpecializationsMatrix />}
           {activeTab === 'memory' && <PersistentWpMemory />}
-          {activeTab === 'php' && <PhpRunnerSandbox />}
-          {activeTab === 'woo' && <WooCommerceManager />}
-          {activeTab === 'gutenberg' && <GutenbergScaffolder />}
-          {activeTab === 'hooks' && <PluginHookExplorer />}
           {activeTab === 'mcp' && <McpConfigGuide />}
         </section>
 
@@ -157,7 +183,7 @@ export function App() {
             Created with intention by <a href="https://github.com/shahrukh-hack" className="text-primary font-bold hover:underline">Yogeshkumar Patel</a> • Adelaide, Australia 🇦🇺
           </p>
           <p className="text-[11px] text-muted-foreground">
-            Open Source under MIT License • 38 WordPress & WooCommerce Specializations
+            Open Source under MIT License • Includes WooCommerce AI Attribute Extractor Plugin
           </p>
         </footer>
       </main>
