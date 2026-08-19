@@ -140,7 +140,7 @@ add_action('woocommerce_before_cart_table', function() {
                 </span>
               </div>
               <p className="text-xs text-muted-foreground">
-                Calculates regional Australian postcode rules, bulky/heavy freight thresholds (>20kg), and live cart free shipping progress goals.
+                Calculates regional Australian postcode rules, bulky/heavy freight thresholds (over 20kg), and live cart free shipping progress goals.
               </p>
             </div>
           </div>
@@ -206,7 +206,7 @@ add_action('woocommerce_before_cart_table', function() {
             <div className="space-y-0.5">
               <div className="text-xs font-bold text-foreground flex items-center gap-1.5">
                 <Weight className="w-3.5 h-3.5 text-amber-500" />
-                <span>Heavy / Bulky Hardware in Cart (>20kg or Server Rack)</span>
+                <span>Heavy / Bulky Hardware in Cart (over 20kg or Server Rack)</span>
               </div>
               <p className="text-[11px] text-muted-foreground">Applies commercial freight tailgate surcharge (${selectedRule.bulkySurcharge} AUD).</p>
             </div>
