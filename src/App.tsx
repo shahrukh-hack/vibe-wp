@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ImageResolverStudio } from './components/ImageResolverStudio';
 import { OrderTrackingStudio } from './components/OrderTrackingStudio';
 import { AnnouncementBannerStudio } from './components/AnnouncementBannerStudio';
 import { ShippingRulesEngine } from './components/ShippingRulesEngine';
@@ -16,6 +17,7 @@ import { PersistentWpMemory } from './components/PersistentWpMemory';
 import { McpConfigGuide } from './components/McpConfigGuide';
 import {
   Globe,
+  Image as ImageIcon,
   Truck,
   Palette,
   Package,
@@ -41,6 +43,7 @@ import { Toaster } from 'sonner';
 
 export function App() {
   const [activeTab, setActiveTab] = useState<
+    | 'image-resolver'
     | 'orders'
     | 'banners'
     | 'shipping'
@@ -56,7 +59,7 @@ export function App() {
     | 'specializations'
     | 'memory'
     | 'mcp'
-  >('orders');
+  >('image-resolver');
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
@@ -84,7 +87,7 @@ export function App() {
                 Vibe WP
               </span>
               <span className="hidden sm:inline-block ml-2 text-[11px] font-mono text-muted-foreground">
-                v1.6.0 (Orders • Tracking • Banners • Shipping • Security)
+                v1.7.0 (Image Resolver • Orders • Banners • Shipping • Security)
               </span>
             </div>
           </div>
@@ -117,7 +120,7 @@ export function App() {
         <section className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-mono font-semibold">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Courier Tracking • Store Banners • Shipping Logic • Security Hardening</span>
+            <span>Image Resolver • Courier Tracking • Store Banners • Shipping Logic</span>
           </div>
 
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-light text-foreground tracking-tight leading-tight">
@@ -125,7 +128,7 @@ export function App() {
           </h1>
 
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-            Day-to-day operations and autonomous runtime for WordPress & WooCommerce. Dispatch courier tracking, deploy announcement notices, calculate regional shipping, and harden security.
+            Resolve missing feed product images by Brand and MPN, dispatch courier tracking, deploy announcement notices, and calculate regional shipping with Antigravity.
           </p>
         </section>
 
@@ -133,6 +136,7 @@ export function App() {
         <div className="flex justify-center sticky top-20 z-40">
           <div className="inline-flex p-1.5 rounded-2xl border border-border bg-card/95 backdrop-blur-md shadow-sm gap-1 overflow-x-auto max-w-full">
             {[
+              { id: 'image-resolver', label: 'Image Resolver', icon: <ImageIcon className="w-3.5 h-3.5 text-purple-500" /> },
               { id: 'orders', label: 'Courier Tracking', icon: <Package className="w-3.5 h-3.5 text-emerald-500" /> },
               { id: 'banners', label: 'Store Banners', icon: <Megaphone className="w-3.5 h-3.5 text-amber-500" /> },
               { id: 'shipping', label: 'Shipping Engine', icon: <Truck className="w-3.5 h-3.5 text-teal-500" /> },
@@ -167,6 +171,7 @@ export function App() {
 
         {/* Dynamic Views */}
         <section className="pt-2">
+          {activeTab === 'image-resolver' && <ImageResolverStudio />}
           {activeTab === 'orders' && <OrderTrackingStudio />}
           {activeTab === 'banners' && <AnnouncementBannerStudio />}
           {activeTab === 'shipping' && <ShippingRulesEngine />}
