@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ShippingRulesEngine } from './components/ShippingRulesEngine';
+import { ThemeDesignStudio } from './components/ThemeDesignStudio';
 import { AiAttributeExtractorDemo } from './components/AiAttributeExtractorDemo';
 import { WsodSafeSandbox } from './components/WsodSafeSandbox';
 import { HeadlessTypeGenerator } from './components/HeadlessTypeGenerator';
@@ -14,7 +16,8 @@ import { PluginHookExplorer } from './components/PluginHookExplorer';
 import { McpConfigGuide } from './components/McpConfigGuide';
 import {
   Globe,
-  Terminal,
+  Truck,
+  Palette,
   ShoppingBag,
   Layers,
   Zap,
@@ -30,12 +33,13 @@ import {
   Database,
   Gauge,
   Send,
-  Download,
 } from 'lucide-react';
 import { Toaster } from 'sonner';
 
 export function App() {
   const [activeTab, setActiveTab] = useState<
+    | 'shipping'
+    | 'theme-studio'
     | 'extractor'
     | 'wsod'
     | 'types'
@@ -44,12 +48,8 @@ export function App() {
     | 'webhooks'
     | 'specializations'
     | 'memory'
-    | 'php'
-    | 'woo'
-    | 'gutenberg'
-    | 'hooks'
     | 'mcp'
-  >('extractor');
+  >('shipping');
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
@@ -77,7 +77,7 @@ export function App() {
                 Vibe WP
               </span>
               <span className="hidden sm:inline-block ml-2 text-[11px] font-mono text-muted-foreground">
-                v1.2.0 (AI Extractor + 5 Dev Features + 38 Plugins)
+                v1.4.0 (Shipping Engine + Theme Studio + MCP Runtime)
               </span>
             </div>
           </div>
@@ -110,27 +110,27 @@ export function App() {
         <section className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-mono font-semibold">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>AI Attribute Extractor • WSOD Guard • Headless TypeScript • 38 Specializations</span>
+            <span>Shipping Logic • Theme Design Studio • Safe PHP • 38 Specializations</span>
           </div>
 
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-light text-foreground tracking-tight leading-tight">
-            Universal AI Agent MCP & <span className="italic font-normal text-primary">WooCommerce Intelligence</span>
+            Universal AI Agent MCP & <span className="italic font-normal text-primary">WordPress Runtime</span>
           </h1>
 
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-            Autonomous runtime for WordPress & WooCommerce. Extract filterable attributes with AI, prevent fatal WSOD crashes, auto-generate TypeScript schemas, and optimize SQL performance.
+            Autonomous runtime for WordPress & WooCommerce. Scaffold regional shipping logic, mathematically compute fluid typography tokens, prevent fatal WSOD crashes, and optimize SQL performance.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-2 pt-2 text-xs font-mono text-muted-foreground">
-            <span className="px-2 py-1 rounded bg-muted">AI Attribute Extractor</span>
+            <span className="px-2 py-1 rounded bg-muted">Regional Shipping Engine</span>
+            <span>•</span>
+            <span className="px-2 py-1 rounded bg-muted">Theme Design Studio</span>
             <span>•</span>
             <span className="px-2 py-1 rounded bg-muted">WSOD Safe Sandbox</span>
             <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">Headless TS Types</span>
-            <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">SQL Optimizer</span>
-            <span>•</span>
             <span className="px-2 py-1 rounded bg-muted">38 Plugins Covered</span>
+            <span>•</span>
+            <span className="px-2 py-1 rounded bg-muted">AI Attribute Extractor</span>
           </div>
         </section>
 
@@ -138,14 +138,16 @@ export function App() {
         <div className="flex justify-center sticky top-20 z-40">
           <div className="inline-flex p-1.5 rounded-2xl border border-border bg-card/95 backdrop-blur-md shadow-sm gap-1 overflow-x-auto max-w-full">
             {[
-              { id: 'extractor', label: 'AI Attribute Extractor', icon: <ShoppingBag className="w-3.5 h-3.5 text-pink-500" /> },
-              { id: 'wsod', label: 'WSOD Safe Guard', icon: <Shield className="w-3.5 h-3.5 text-emerald-500" /> },
+              { id: 'shipping', label: 'Shipping Engine', icon: <Truck className="w-3.5 h-3.5 text-emerald-500" /> },
+              { id: 'theme-studio', label: 'Theme Studio', icon: <Palette className="w-3.5 h-3.5 text-indigo-500" /> },
+              { id: 'wsod', label: 'WSOD Safe Guard', icon: <Shield className="w-3.5 h-3.5 text-teal-500" /> },
               { id: 'types', label: 'Headless TypeScript', icon: <Code2 className="w-3.5 h-3.5 text-blue-500" /> },
-              { id: 'query', label: 'SQL Query Optimizer', icon: <Database className="w-3.5 h-3.5 text-amber-500" /> },
-              { id: 'assets', label: 'Asset & CWV Auditor', icon: <Gauge className="w-3.5 h-3.5 text-purple-500" /> },
-              { id: 'webhooks', label: 'Webhook Simulator', icon: <Send className="w-3.5 h-3.5 text-indigo-500" /> },
+              { id: 'query', label: 'SQL Optimizer', icon: <Database className="w-3.5 h-3.5 text-amber-500" /> },
+              { id: 'assets', label: 'Asset Auditor', icon: <Gauge className="w-3.5 h-3.5 text-purple-500" /> },
+              { id: 'webhooks', label: 'Webhook Simulator', icon: <Send className="w-3.5 h-3.5 text-pink-500" /> },
+              { id: 'extractor', label: 'AI Attribute Extractor', icon: <ShoppingBag className="w-3.5 h-3.5 text-rose-500" /> },
               { id: 'specializations', label: '38 Specializations', icon: <Box className="w-3.5 h-3.5 text-violet-500" /> },
-              { id: 'memory', label: 'Persistent Memory', icon: <Brain className="w-3.5 h-3.5 text-rose-500" /> },
+              { id: 'memory', label: 'Persistent Memory', icon: <Brain className="w-3.5 h-3.5 text-amber-600" /> },
               { id: 'mcp', label: 'MCP Setup', icon: <Server className="w-3.5 h-3.5 text-slate-500" /> },
             ].map((tab) => (
               <button
@@ -164,14 +166,16 @@ export function App() {
           </div>
         </div>
 
-        {/* Dynamic Views (Rendered directly below navigation bar) */}
+        {/* Dynamic Views */}
         <section className="pt-2">
-          {activeTab === 'extractor' && <AiAttributeExtractorDemo />}
+          {activeTab === 'shipping' && <ShippingRulesEngine />}
+          {activeTab === 'theme-studio' && <ThemeDesignStudio />}
           {activeTab === 'wsod' && <WsodSafeSandbox />}
           {activeTab === 'types' && <HeadlessTypeGenerator />}
           {activeTab === 'query' && <QueryOptimizer />}
           {activeTab === 'assets' && <AssetAuditor />}
           {activeTab === 'webhooks' && <WebhookSimulator />}
+          {activeTab === 'extractor' && <AiAttributeExtractorDemo />}
           {activeTab === 'specializations' && <SpecializationsMatrix />}
           {activeTab === 'memory' && <PersistentWpMemory />}
           {activeTab === 'mcp' && <McpConfigGuide />}
@@ -183,7 +187,7 @@ export function App() {
             Created with intention by <a href="https://github.com/shahrukh-hack" className="text-primary font-bold hover:underline">Yogeshkumar Patel</a> • Adelaide, Australia 🇦🇺
           </p>
           <p className="text-[11px] text-muted-foreground">
-            Open Source under MIT License • Includes WooCommerce AI Attribute Extractor Plugin
+            Universal Model Context Protocol (MCP) Server for WordPress & WooCommerce
           </p>
         </footer>
       </main>
