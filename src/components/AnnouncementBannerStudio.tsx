@@ -78,9 +78,7 @@ add_action('wp_body_open', function() {
             <span style="background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">${badgeText}</span>
             <span>${bannerText}</span>
             ${enableCountdown ? '<span id="vibe-banner-timer" style="background: rgba(0,0,0,0.25); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 12px; font-weight: 700;">⏱ 2h 45m left</span>' : ''}
-            <a href="${ctaUrl}" style="background: #ffffff; color: #0f172a; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none; margin-left: 6px; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.9" onmouseout="this.style.opacity=1">${ctaText} &rarr;</a>
-        </div>
-        ${isDismissible ? '<button onclick="document.getElementById(\\'vibe-store-banner\\').style.display=\\'none\\'; localStorage.setItem(\\'vibe_banner_closed\\', \\'true\\');" style="position: absolute; right: 12px; background: transparent; border: none; color: ' + selectedPreset.textColor + '; font-size: 16px; cursor: pointer; padding: 4px; opacity: 0.8;" title="Dismiss">&times;</button>' : ''}
+        ${isDismissible ? `<button onclick="document.getElementById('vibe-store-banner').style.display='none'; localStorage.setItem('vibe_banner_closed', 'true');" style="position: absolute; right: 12px; background: transparent; border: none; color: ${selectedPreset.textColor}; font-size: 16px; cursor: pointer; padding: 4px; opacity: 0.8;" title="Dismiss">&times;</button>` : ''}
     </div>
     <script>
     if (localStorage.getItem('vibe_banner_closed') === 'true') {
