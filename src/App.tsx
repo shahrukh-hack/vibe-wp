@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { OrderTrackingStudio } from './components/OrderTrackingStudio';
+import { AnnouncementBannerStudio } from './components/AnnouncementBannerStudio';
 import { ShippingRulesEngine } from './components/ShippingRulesEngine';
 import { ThemeDesignStudio } from './components/ThemeDesignStudio';
 import { SecurityHardeningStudio } from './components/SecurityHardeningStudio';
@@ -11,20 +13,17 @@ import { AssetAuditor } from './components/AssetAuditor';
 import { WebhookSimulator } from './components/WebhookSimulator';
 import { SpecializationsMatrix } from './components/SpecializationsMatrix';
 import { PersistentWpMemory } from './components/PersistentWpMemory';
-import { PhpRunnerSandbox } from './components/PhpRunnerSandbox';
-import { WooCommerceManager } from './components/WooCommerceManager';
-import { GutenbergScaffolder } from './components/GutenbergScaffolder';
-import { PluginHookExplorer } from './components/PluginHookExplorer';
 import { McpConfigGuide } from './components/McpConfigGuide';
 import {
   Globe,
   Truck,
   Palette,
+  Package,
+  Megaphone,
   Lock,
   FolderTree,
   ShoppingBag,
   Layers,
-  Zap,
   Server,
   Github,
   Sun,
@@ -42,6 +41,8 @@ import { Toaster } from 'sonner';
 
 export function App() {
   const [activeTab, setActiveTab] = useState<
+    | 'orders'
+    | 'banners'
     | 'shipping'
     | 'theme-studio'
     | 'security'
@@ -55,7 +56,7 @@ export function App() {
     | 'specializations'
     | 'memory'
     | 'mcp'
-  >('shipping');
+  >('orders');
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
@@ -83,7 +84,7 @@ export function App() {
                 Vibe WP
               </span>
               <span className="hidden sm:inline-block ml-2 text-[11px] font-mono text-muted-foreground">
-                v1.5.0 (Full WordPress & WooCommerce Power Suite)
+                v1.6.0 (Orders • Tracking • Banners • Shipping • Security)
               </span>
             </div>
           </div>
@@ -116,7 +117,7 @@ export function App() {
         <section className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-mono font-semibold">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Shipping Logic • Theme Studio • Security Hardening • CPT Scaffolder</span>
+            <span>Courier Tracking • Store Banners • Shipping Logic • Security Hardening</span>
           </div>
 
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-light text-foreground tracking-tight leading-tight">
@@ -124,40 +125,28 @@ export function App() {
           </h1>
 
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-            Autonomous runtime for WordPress & WooCommerce. Scaffold regional shipping, compute fluid typography tokens, harden security against bots, register CPTs, and optimize database SQL performance.
+            Day-to-day operations and autonomous runtime for WordPress & WooCommerce. Dispatch courier tracking, deploy announcement notices, calculate regional shipping, and harden security.
           </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-2 text-xs font-mono text-muted-foreground">
-            <span className="px-2 py-1 rounded bg-muted">Shipping Engine</span>
-            <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">Theme Studio</span>
-            <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">Security Shield</span>
-            <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">CPT Scaffolder</span>
-            <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">WSOD Safe Guard</span>
-            <span>•</span>
-            <span className="px-2 py-1 rounded bg-muted">38 Plugins Covered</span>
-          </div>
         </section>
 
         {/* Navigation Tabs Bar */}
         <div className="flex justify-center sticky top-20 z-40">
           <div className="inline-flex p-1.5 rounded-2xl border border-border bg-card/95 backdrop-blur-md shadow-sm gap-1 overflow-x-auto max-w-full">
             {[
-              { id: 'shipping', label: 'Shipping Engine', icon: <Truck className="w-3.5 h-3.5 text-emerald-500" /> },
+              { id: 'orders', label: 'Courier Tracking', icon: <Package className="w-3.5 h-3.5 text-emerald-500" /> },
+              { id: 'banners', label: 'Store Banners', icon: <Megaphone className="w-3.5 h-3.5 text-amber-500" /> },
+              { id: 'shipping', label: 'Shipping Engine', icon: <Truck className="w-3.5 h-3.5 text-teal-500" /> },
               { id: 'theme-studio', label: 'Theme Studio', icon: <Palette className="w-3.5 h-3.5 text-indigo-500" /> },
-              { id: 'security', label: 'Security Shield', icon: <Lock className="w-3.5 h-3.5 text-teal-500" /> },
+              { id: 'security', label: 'Security Shield', icon: <Lock className="w-3.5 h-3.5 text-red-500" /> },
               { id: 'cpt-studio', label: 'CPT Scaffolder', icon: <FolderTree className="w-3.5 h-3.5 text-blue-500" /> },
               { id: 'wsod', label: 'WSOD Safe Guard', icon: <Shield className="w-3.5 h-3.5 text-emerald-600" /> },
               { id: 'types', label: 'Headless TS', icon: <Code2 className="w-3.5 h-3.5 text-sky-500" /> },
-              { id: 'query', label: 'SQL Optimizer', icon: <Database className="w-3.5 h-3.5 text-amber-500" /> },
+              { id: 'query', label: 'SQL Optimizer', icon: <Database className="w-3.5 h-3.5 text-amber-600" /> },
               { id: 'assets', label: 'Asset Auditor', icon: <Gauge className="w-3.5 h-3.5 text-purple-500" /> },
               { id: 'webhooks', label: 'Webhook Simulator', icon: <Send className="w-3.5 h-3.5 text-pink-500" /> },
               { id: 'extractor', label: 'AI Attribute Extractor', icon: <ShoppingBag className="w-3.5 h-3.5 text-rose-500" /> },
               { id: 'specializations', label: '38 Specializations', icon: <Box className="w-3.5 h-3.5 text-violet-500" /> },
-              { id: 'memory', label: 'Persistent Memory', icon: <Brain className="w-3.5 h-3.5 text-amber-600" /> },
+              { id: 'memory', label: 'Persistent Memory', icon: <Brain className="w-3.5 h-3.5 text-amber-700" /> },
               { id: 'mcp', label: 'MCP Setup', icon: <Server className="w-3.5 h-3.5 text-slate-500" /> },
             ].map((tab) => (
               <button
@@ -178,6 +167,8 @@ export function App() {
 
         {/* Dynamic Views */}
         <section className="pt-2">
+          {activeTab === 'orders' && <OrderTrackingStudio />}
+          {activeTab === 'banners' && <AnnouncementBannerStudio />}
           {activeTab === 'shipping' && <ShippingRulesEngine />}
           {activeTab === 'theme-studio' && <ThemeDesignStudio />}
           {activeTab === 'security' && <SecurityHardeningStudio />}
