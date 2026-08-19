@@ -1,125 +1,183 @@
 <div align="center">
 
-# 🌐 Vibe WP (v1.4)
-### Universal Model Context Protocol (MCP) Server & Headless AI Agent Runtime for WordPress & WooCommerce
+# 🌐 Vibe WP
+### The AI Power Tool for WordPress & WooCommerce — Made Simple
 
 [![Author](https://img.shields.io/badge/Author-@shahrukh--hack-181717?style=flat-square&logo=github)](https://github.com/shahrukh-hack)
-[![Version](https://img.shields.io/badge/Version-v1.4.0-2563EB?style=flat-square)](package.json)
+[![Version](https://img.shields.io/badge/Version-v1.7.0-2563EB?style=flat-square)](package.json)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
-[![MCP Protocol](https://img.shields.io/badge/MCP-JSON--RPC%202.0%20Ready-green?style=flat-square)](https://modelcontextprotocol.io/)
-[![Specializations](https://img.shields.io/badge/Specializations-38%20Covered%20End--to--End-indigo?style=flat-square)](#-1-specializations-38-builders-themes--plugins-covered-end-to-end)
-[![Persistent Memory](https://img.shields.io/badge/Memory-Across%20Sessions-purple?style=flat-square)](#-2-intelligence--persistent-project-memory)
-[![Live Visualizer](https://img.shields.io/badge/Live-Demo%20Sandbox-FF0055?style=flat-square&logo=framer)](https://shahrukh-hack.github.io/vibe-wp/)
+[![Protocol](https://img.shields.io/badge/MCP-JSON--RPC%202.0-green?style=flat-square)](https://modelcontextprotocol.io/)
+[![Built For](https://img.shields.io/badge/AI%20Agents-Antigravity%20%7C%20Cursor%20%7C%20Claude-purple?style=flat-square)](https://github.com/shahrukh-hack/vibe-wp)
 
 <br />
 
-> **The ultimate WordPress & WooCommerce intelligence layer for AI coding agents.**  
-> Built on top of native Model Context Protocol (JSON-RPC 2.0 stdio). Equips **Antigravity**, **Cursor**, and **Claude Code** with **Regional Shipping Logic**, **Theme Design Studio & Fluid Typography**, safe PHP execution, **38 page builders & plugins covered end-to-end**, and persistent project memory.
+> **Turn your AI assistant into an expert WordPress & WooCommerce manager.**  
+> Simply type in plain English what you want to do (dispatch orders, add shipping rules, fix missing images, create store banners, or protect your site from hackers), and **Vibe WP** handles the technical work automatically with zero plugin bloat.
 
 </div>
 
 ---
 
-## 🌐 Live Interactive MCP Demo Sandbox
+## 📖 What is Vibe WP? (In Simple Terms)
 
-Test the visual PHP execution environment, regional shipping engine, theme design studio, and 38-specialization inspector:  
-👉 **[https://shahrukh-hack.github.io/vibe-wp/](https://shahrukh-hack.github.io/vibe-wp/)**
+Running a WordPress or WooCommerce website usually requires clicking through dozens of confusing settings menus or buying expensive, slow plugins.
 
----
-
-## ⚡ System Requirements
-
-```
-REQUIRES: WordPress 6.9+ · PHP 8.0+ · Node.js 18+
-Protocol: Native Model Context Protocol (JSON-RPC 2.0 stdio)
-Supported IDEs: Google Antigravity, Cursor, Claude Code, Windsurf, Roo Code
-```
+**Vibe WP** connects your website directly to AI tools like **Google Antigravity**, **Cursor**, or **Claude Code**. Instead of coding or clicking around in `wp-admin`, you simply tell the AI what you want in plain English, and it gets done in seconds!
 
 ---
 
-## 🚚 1. WooCommerce Dynamic Shipping & Freight Rules Engine (`scaffold_shipping_rules`)
+## 💬 Real-World Prompts: What You Type ➔ What You Achieve
 
-Generates lightweight, native WooCommerce PHP shipping logic without expensive or bloated plugins:
+Here are real examples of how anyone (even with zero technical knowledge) can run their store using simple chat prompts:
 
-* **Regional Australian Postcode Matrix:** Fast local delivery logic for Greater Adelaide (`5000–5199`, `5950`), Interstate Metro (`2000–2249`, `3000–3207`, `4000–4179`), and Regional/Remote areas.
-* **Bulky & Heavy Freight Surcharge:** Automatically detects heavy hardware or server racks (>20kg) and applies commercial tailgate delivery surcharges.
-* **Live Free Shipping Cart Goal:** Injects dynamic *"Add $35 more for FREE Adelaide Delivery!"* progress banner onto cart and checkout pages.
+---
+
+### 1. 📦 Daily Order Dispatch & Courier Tracking
+> **What it does:** Updates WooCommerce orders, generates live clickable tracking links, and sends dispatch emails to customers.
+
+* **💬 What you type in chat:**
+  ```text
+  "Update Order #4821: Add Australia Post tracking number AP982348123AU, mark as Completed, and notify the customer."
+  ```
+* **🎯 What you achieve instantly:**
+  * Order `#4821` is changed from *Processing* to *Completed*.
+  * A live clickable tracking link (`https://auspost.com.au/mypost/track/#/details/AP982348123AU`) is saved to the order.
+  * The customer receives an automated email with tracking details.
+  * Supported couriers: **Australia Post**, **StarTrack Express**, **TNT / FedEx**, **CouriersPlease**, **Aramex**.
+
+---
+
+### 2. 🖼️ Missing Product Image Resolver
+> **What it does:** Finds high-resolution photos for products that imported from supplier feeds without images.
+
+* **💬 What you type in chat:**
+  ```text
+  "Find a high-res photo for our Ubiquiti switch (MPN: USW-24-POE) and set it as the featured product image."
+  ```
+* **🎯 What you achieve instantly:**
+  * Searches the global hardware catalog by Brand and Part Number.
+  * Downloads the official high-resolution photo directly into your WordPress media library.
+  * Sets the image as the main product thumbnail with Google SEO alt-tags.
+
+---
+
+### 3. 📢 Store Announcement Banners & Notices
+> **What it does:** Puts a temporary announcement bar at the top of your website without installing slow banner plugins.
+
+* **💬 What you type in chat:**
+  ```text
+  "Add a green top banner saying: 'Order before 2:00 PM for Same-Day Adelaide Courier Dispatch!' with a 2-hour countdown timer and a button to our shop."
+  ```
+* **🎯 What you achieve instantly:**
+  * A sleek announcement bar appears across the top of your website.
+  * Includes a live countdown timer and a dismiss button that remembers when a customer closes it.
+
+---
+
+### 4. 🚚 Regional Shipping & Freight Surcharges
+> **What it does:** Sets up custom delivery pricing based on Australian postcodes and heavy item weights.
+
+* **💬 What you type in chat:**
+  ```text
+  "Give free delivery for Adelaide Metro postcodes (5000-5199) on orders over $150 AUD. If the cart has heavy items like server racks over 20kg, add a $25 commercial freight fee."
+  ```
+* **🎯 What you achieve instantly:**
+  * Calculates exact delivery fees at checkout automatically.
+  * Displays a live progress goal on the cart: *"Add $35 more for FREE Adelaide Delivery!"*
+
+---
+
+### 5. 🛍️ AI Product Attribute Extractor (For Shop Filters & Amazon)
+> **What it does:** Reads messy supplier feed titles and extracts clean filterable attributes (RAM, Screen Size, CPU, Resolution) and Amazon Seller Central compliance fields.
+
+* **💬 What you type in chat:**
+  ```text
+  "Extract all technical specifications from our 5,000 imported products so customers can filter by RAM, Screen Size, and Processor on our shop sidebar."
+  ```
+* **🎯 What you achieve instantly:**
+  * Customers see clean filters on your shop: `RAM (16GB, 32GB)`, `Screen Size (15.6")`, `Brand (Dell)`.
+  * Prepares 100% compliant Amazon Seller Central metadata (Brand Registry, MPN, Hazmat UN3481 Li-Ion battery info, AU Type I plug).
+  * Automatically handles 16 commercial categories (Laptops, Desktops, Monitors, TVs, Soundbars, Speakers, Alarms, Intercoms, Printers, Toners, Components, Networking, CCTV, Power/UPS, Cables, Peripherals).
+
+---
+
+### 6. 🛡️ 1-Click Security Shield (Anti-Hacker Hardening)
+> **What it does:** Protects your WordPress site from common hacker attacks without heavy security plugins.
+
+* **💬 What you type in chat:**
+  ```text
+  "Harden our WordPress site: block bots from probing admin usernames, disable XML-RPC attacks, and add security headers."
+  ```
+* **🎯 What you achieve instantly:**
+  * Shuts down XML-RPC brute force attacks.
+  * Blocks `/wp-json/wp/v2/users` so bots cannot harvest admin usernames.
+  * Injects enterprise HTTP security headers (`X-Frame-Options`, `Content-Security-Policy`).
+
+---
+
+### 7. 🎨 Theme Design & Fluid Responsive Typography
+> **What it does:** Automatically calculates smooth font sizes that scale perfectly from small mobile phones to giant desktop monitors.
+
+* **💬 What you type in chat:**
+  ```text
+  "Generate smooth responsive font sizes for our GeneratePress theme so H1 headings look great on iPhone (32px) and scale smoothly to Desktop (56px)."
+  ```
+* **🎯 What you achieve instantly:**
+  * Computes mathematical CSS `clamp()` formulas (`clamp(2.000rem, 2.22vw + 1.500rem, 3.500rem)`).
+  * Exports 1-click design tokens for **GeneratePress, Kadence, Astra, Bricks Builder, and block themes (`theme.json` v3)**.
+
+---
+
+### 8. 📁 Custom Post Types & Sections (CPT)
+> **What it does:** Creates new custom content sections (e.g. Case Studies, Team Members, Services) with categories and custom fields.
+
+* **💬 What you type in chat:**
+  ```text
+  "Create a new 'Case Studies' section with an 'Industry' category, featured image support, and full Gutenberg editor support."
+  ```
+* **🎯 What you achieve instantly:**
+  * Registers the complete custom post type and category taxonomy in WordPress with REST API support in 5 seconds.
+
+---
+
+## ⚡ 60-Second Quickstart (Command Line Shortcuts)
+
+If you prefer using the terminal, you can trigger any feature with one simple command:
 
 ```bash
-# Scaffold shipping rules via CLI:
+# Dispatch courier tracking (AusPost, StarTrack, TNT)
+npx vibe-wp track
+
+# Deploy store announcement notice
+npx vibe-wp banner
+
+# Look up missing product photos
+npx vibe-wp image
+
+# Scaffold regional postcode shipping rules
 npx vibe-wp shipping
-```
 
----
-
-## 🎨 2. Theme Design Studio & Fluid Typography Engine (`generate_theme_tokens`)
-
-Mathematically computes smooth CSS `clamp()` formulas and design tokens across all major theme ecosystems:
-
-* **Mathematical Fluid Typography:** Calculates exact viewport scales (`clamp(min, preferred, max)`) from 360px mobile to 1440px desktop for `H1`–`H6` and Body text.
-* **Multi-Theme Token Export:** Generates ready-to-use tokens for:
-  * **GeneratePress:** Customizer CSS overrides & font filters.
-  * **Kadence Theme:** Global palette variables (`--global-palette1`, `--global-h1-font-size`).
-  * **Astra Theme:** Global color palette & typography tokens (`--ast-global-color-0`).
-  * **Bricks Builder:** Global color variables & container width clamps.
-  * **FSE Block Themes:** Official `theme.json` (v3) schemas.
-
-```bash
-# Generate theme tokens via CLI:
+# Generate responsive fluid font scales
 npx vibe-wp theme
+
+# Run 1-click WordPress security hardening
+npx vibe-wp security
+
+# Scaffold Custom Post Types & Taxonomies
+npx vibe-wp cpt
+
+# View all 38 supported builders and plugins
+npx vibe-wp specs
+
+# Start native Model Context Protocol (MCP) server for AI
+npx vibe-wp mcp
 ```
 
 ---
 
-## 🏗️ 3. Specializations: 38 Builders, Themes & Plugins Covered End-to-End
+## 🔌 How to Connect to AI Assistants (Antigravity, Cursor, Claude Code)
 
-* 🏗️ **Builders (8):** **Elementor** · **Bricks** · **Divi 5** · **Beaver Builder** · **Breakdance** · **WPBakery Page Builder** · **Etch** · **Mosaic** · *and growing*
-* 🎨 **Themes (6):** **GeneratePress** · **Astra** · **Kadence** · **Avada** · **OceanWP** · **Spectra One** · *and growing*
-* 🧱 **Blocks (3):** **GenerateBlocks** · **Kadence Blocks** · **Spectra** · *and growing*
-* 🛍️ **Store (1):** **WooCommerce** · *and growing*
-* 📝 **Forms (6):** **WPForms** · **Contact Form 7** · **Gravity Forms** · **Fluent Forms** · **Ninja Forms** · **Formidable Forms** · *and growing*
-* 🏷️ **Field Plugins & CPT (6):** **ACF PRO** · **JetEngine** · **Meta Box** · **ACPT** · **Pods** · **ASE (Admin & Site Enhancements)** · *and growing*
-* ⚡ **Add-ons (1):** **Bricksforge** · *and growing*
-* 🔄 **Dynamic Data (1):** **Dynamic Shortcodes** · *and growing*
-* 💻 **Code Execution (1):** **Code Snippets** · *and growing*
-* 🚀 **SEO (4):** **Yoast SEO** · **Rank Math** · **All in One SEO** · **SeoPress** · *and growing*
-* 🌐 **Translation (1):** **Weglot** · *and growing*
-
----
-
-## ⚡ 4. Developer Superpowers Included
-
-| Superpower | MCP Tool Name | Problem Solved |
-| :--- | :--- | :--- |
-| **🚚 Shipping Engine** | `scaffold_shipping_rules` | Scaffolds native WooCommerce regional postcode shipping, bulky freight, and free delivery thresholds. |
-| **🎨 Theme Studio** | `generate_theme_tokens` | Generates mathematical fluid typography `clamp()` and tokens for GeneratePress, Kadence, Astra, and `theme.json` v3. |
-| **🛡️ WSOD Safe Guard** | `safe_execute_php` | Lints PHP syntax and wraps execution in isolated sandbox rollback transactions to prevent fatal White Screens of Death. |
-| **🧬 Headless TS Types** | `generate_wp_types` | Auto-generates 100% type-safe TypeScript interfaces and Zod runtime schemas from ACF PRO and WooCommerce. |
-| **⚡ SQL Optimizer** | `analyze_slow_queries` | Detects unindexed `wp_postmeta` table scans and N+1 query loops, generating 1-click B-Tree indexing and cache priming fixes. |
-| **🏎️ Asset Auditor** | `audit_enqueued_assets` | Scans enqueued CSS/JS per page and writes surgical `wp_dequeue_script()` directives to eliminate render-blocking bloat. |
-| **📬 Webhook Simulator** | `simulate_form_webhook` | Tests Gravity Forms, WPForms, and Fluent Forms CRM payloads (HubSpot, Zapier, Make) without submitting dirty leads. |
-
----
-
-## 🧠 5. Intelligence & Persistent Project Memory
-
-`vibe-wp` preserves site-specific architectural choices in `AGENT_MEMORY.md` so AI agents never suffer from context amnesia when switching tools or starting fresh conversations across sessions.
-
----
-
-## 🎁 6. Bonus Add-on: WooCommerce AI Attribute Extractor Plugin
-
-Included in [`plugin/vibe-ai-attribute-extractor/`](plugin/vibe-ai-attribute-extractor/) as a companion add-on for e-commerce stores:
-
-* **Dual-Purpose Engine:** Extracts unstructured product specs (e.g. *RAM, Screen Size, Resolution, CPU, PoE Budget, Wattage*) into clean frontend WooCommerce filter labels (`pa_*`) and generates 100% compliant **Amazon Seller Central SP-API** metadata (`_amazon_*` including Brand Registry, MPN, Hazmat UN3481 Li-Ion, and AU Type I Plug).
-* **Nightly Feed Automation:** Hooks into `pmxi_saved_post` (WP All Import) and WooCommerce CSV imports with `0.001s` content hash caching.
-* **7,000+ Scale:** ActionScheduler async background queue in chunks of 50 with live progress tracking across 16 commercial categories.
-
----
-
-## 🔌 7. Model Context Protocol (MCP) Setup
-
-Equip **Antigravity**, **Cursor**, and **Claude Code** with direct WordPress runtime tools:
+Add this simple configuration to connect your AI assistant directly to your site:
 
 ### 🔹 Google Antigravity (`~/.gemini/antigravity/mcp-config.json`):
 ```json
